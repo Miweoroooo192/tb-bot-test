@@ -1,25 +1,12 @@
-a = require("../index")
-function go() {
-    a.connect("Testbot","blue","=","A")
-    a.onconnect = function(socket) {
-        console.log("Connected!")
-        a.setcommand("a",function(data, socket) {
-            socket.send("AH")
-            console.log(data)
-        })
-        a.onuserjoined(function(data) {
-            console.log(data)
-        })
-        a.onuserleft(function(data) {
-            console.log(data)
-        })
-        setTimeout(() => {
-            console.log("updating color")
-            a.updatecolor("White")
-        }, 5000);
-        setTimeout(() => {
-            a.updatename("test2")
-        }, 15000);
-    }
-}
-go()
+tb = require("../index")
+
+
+tb.setcommand("test", () => tb.socket.send("test"))
+tb.setcommand("help", () => tb.socket.send("commands: \nde!help\nde!test\nde!home\nde!banana"))
+tb.setcommand("home", () => tb.socket.send(tb.userhome))
+tb.setcommand("banana", ()  => {
+    tb.updateprefix("ba!") // doenst work
+    tb.updatewhole("Banana [de!]", "yellow") // this works
+ })
+tb.setcommand("home", () => tb.socket.send(tb.userhome))
+tb.connect("test [de!]", "red", "de!")
