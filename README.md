@@ -42,8 +42,8 @@ The "date" is when you messaged in epoch time
 The "nick" is the name of the user
 The "color" is the html color of the user
 The "style"... idk
-The "home" is a string that can be used to identify the client as it never changes
-The "msg" is the message that was sent that triggered the command, useful for more advanced commands
+The "home" is a hashed string that has an IP address inside it (dont worry its impossible to dencrypt one and even it did dont worry)
+The "msg" is the message that was sent that triggered the command, useful for more advanced commands.
 The "isBot" thing just got added recently, its useful to determine bots.
 
 ```
