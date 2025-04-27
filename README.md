@@ -23,9 +23,7 @@ Unlike the original, you dont need to put everything inside a function
 
 setcommand - to make a message the bot can respond to
 ```js
-tb.setcommand("ah",function(data, socket) {
-  socket.send("AH!")
-})
+tb.setcommand("ah",() => tb.socket.send("AH!"))
 //When a user says "a" with the prefix, the bot will send back "AH!"
 //Have a look through the data variable for info on the command that was sent.
 ```
