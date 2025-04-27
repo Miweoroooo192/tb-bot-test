@@ -35,7 +35,8 @@ the "data" json passed contains:
   color: 'red',
   style: '',
   home: '72dc437f02e5988aa1bf700adac9a884198f24c46a0fdfabf9b345165ddd6ca6',
-  msg: 'omg'
+  msg: 'omg',
+  isBot: false
 }
 The "date" is when you messaged in epoch time
 The "nick" is the name of the user
@@ -43,32 +44,12 @@ The "color" is the html color of the user
 The "style"... idk
 The "home" is a string that can be used to identify the client as it never changes
 The "msg" is the message that was sent that triggered the command, useful for more advanced commands
+The "isBot" thing just got added recently, its useful to determine bots.
 
 ```
 
-onmessage - Fires a function when a message is sent, complex but useful in some cases but its kinda of spammy.
-```js
-tb.onmessage(function(data) {
-  console.log(data)
-  //The "data" is sometimes different to the data on setcommand.
-  //Log it in the console and inspect it so you know whats in it
-  //Im lazy to put it here
-})
-```
+I removed the onuserjoined, onuserleft, and onmessage functions beause it will be spammy, however theres one way to do it without changing the source.
 
-onuserjoined - Fire a function when a user joins (WARNING: can be used to spam)
-```js
-tb.onuserjoined(function(data) {
-  console.log(data)
-})
-```
-
-onuserleft - Fire a function when a user leaves (WARNING: can be used to spam)
-```js
-tb.onuserleft(function(data) {
-  console.log(data)
-})
-```
 updatecolor - Updates the color of the bot
 ```js
 tb.updatecolor("yellow")
