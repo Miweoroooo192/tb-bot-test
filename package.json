@@ -1,22 +1,17 @@
 {
-  "name": "trollbox-bot",
-  "version": "1.0.6",
-  "description": "",
-  "repository": "https://github.com/codingMASTER398/trollbox-bot",
-  "main": "index.js",
-  "keywords": [],
-  "license": "MIT",
-  "author": "codingMASTER398",
   "dependencies": {
     "he": "^1.2.0",
-    "node-fetch": "^2.6.1",
-    "node-html-parser": "^1.3.1",
-    "request": "^2.88.2",
-    "socket.io-client": "^2.3.1",
-    "trollbox-headers": "0.0.4"
+    "socket.io-client": "^2.0.0"
   },
-  "engines": {
-    "node": "v14.15.4",
-    "npm": "6.14.10"
-  }
+  "name": "tb-bot-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Miweoroooo192/tb-bot-test",
+  "devDependencies": {},
+  
+  "keywords": [],
+  "author": "Miweoro",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "tb-bot-test"
 }
