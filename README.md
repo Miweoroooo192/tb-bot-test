@@ -6,13 +6,16 @@ Note that its still in construction.
 
 ## Installation
 
-soon
+Type this on the terminal:
+```bash 
+npm install tb-bot-test
+```
 
 ## Usage
 
 First of all, require() the module into your project.
 ```js
-tb = require("Soon, this isnt the package name btw")
+tb = require("tb-bot-test")
 ```
 Connecting your bot
 ```js
